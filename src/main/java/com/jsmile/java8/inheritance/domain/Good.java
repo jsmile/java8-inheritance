@@ -1,6 +1,11 @@
 package com.jsmile.java8.inheritance.domain;
 
-public class Good
+/**
+ *  abstract class : 자신의 직접 생성은 방지하고, 공통의 특징을 하위 클래스에 강제하고 싶을 때
+ *  - 기본은 public,
+ *  - private, static, final 등의 method 는 사용불가
+ * */
+public abstract class Good
 {
 	public enum UnitOfMeasureType { LITER, GALLON, CUBIC_METER, CUBIC_FEET }
 	private String name;
@@ -43,18 +48,13 @@ public class Good
 	public double getWeightPerUofM() { return weightPerUofM; }
 	public void setWeightPerUofM( double weightPerUofM ) { this.weightPerUofM = weightPerUofM; }
 	
-	public double volume() { return 0.0; }
+	public abstract double volume();
 	
 	public double weight() { return ( volume() * weightPerUofM ); }
 	
 	public String toSimpleString() { return name + " - " + modelNumber; }
 	
-	@Override
-	public String toString()
-	{
-		return "Good [name=" + name + ", modelNumber=" + modelNumber + ", height=" + height + ", unitOfMeasure="
-				+ unitOfMeasure + ", flammable=" + flammable + ", weightPerUofM=" + weightPerUofM + "]";
-	}
+	public abstract  String toString();
 	
 	
 }
