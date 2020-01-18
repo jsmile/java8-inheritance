@@ -7,12 +7,12 @@ public class Order
    MyDate orderDate;
    double orderAmount = 0.00;
    String customer;
-   String product;
+   Product product;
    int quantity;
 
    public static double taxRate = 0.05;
 
-   public Order( MyDate _orderDate, double _orderAmount, String _customer, String _product, int _quantity )
+   public Order( MyDate _orderDate, double _orderAmount, String _customer, Product _product, int _quantity )
    {
       this.orderDate = _orderDate;
       this.orderAmount = _orderAmount;
@@ -21,6 +21,22 @@ public class Order
       this.quantity = _quantity;
    }
 
+   public Product getProduct() { return this.product; }
+   public void setProduct( Product _product ) { this.product = _product; }
+
+   public MyDate getOrderDate() { return orderDate; }
+   public void setOrderDate( MyDate orderDate ) { this.orderDate = orderDate; }
+
+   public double getOrderAmount() { return orderAmount; }
+   public void setOrderAmount( double orderAmount ) { this.orderAmount = orderAmount; }
+
+   public String getCustomer() { return customer; }
+   public void setCustomer( String customer ) { this.customer = customer; }
+
+   public int getQuantity() { return quantity; }
+   public void setQuantity( int quantity ) { this.quantity = quantity; }
+
+   public static double getTaxRate() { return taxRate; }
    public static void setTaxRate( double _newRate ) { taxRate = _newRate; }
 
    public static double computeTaxOn( double _anAmount )

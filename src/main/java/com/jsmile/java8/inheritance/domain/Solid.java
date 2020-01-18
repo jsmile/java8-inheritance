@@ -34,5 +34,9 @@ public class Solid extends Good
 	{
 		return super.toSimpleString() + " that is " + volume() + "" + getUnitOfMeasure() + " in size";
 	}
-	
+
+	public String toString()
+	{
+		return super.toSimpleString() + " that is " + volume() + "" + getUnitOfMeasure() + " in size";
+	}
 }

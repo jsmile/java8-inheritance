@@ -29,5 +29,9 @@ public class Liquid extends Good
 	{
 		return super.toSimpleString() + " Liguid " + " " + getUnitOfMeasure();
 	}
-	
+
+	public String toString()
+	{
+		return super.toSimpleString() + " Liguid " + " " + getUnitOfMeasure();
+	}
 }

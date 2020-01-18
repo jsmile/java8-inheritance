@@ -1,6 +1,6 @@
 package com.jsmile.java8.inheritance.domain;
 
-public class Service
+public class Service implements Product
 {
    private String name;
    private int estimatedTaskDuration;

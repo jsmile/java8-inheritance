@@ -5,7 +5,7 @@ package com.jsmile.java8.inheritance.domain;
  *  - 기본은 public,
  *  - private, static, final 등의 method 는 사용불가
  * */
-public abstract class Good
+public abstract class Good implements Product
 {
 	public enum UnitOfMeasureType { LITER, GALLON, CUBIC_METER, CUBIC_FEET }
 	private String name;
@@ -54,7 +54,7 @@ public abstract class Good
 	
 	public String toSimpleString() { return name + " - " + modelNumber; }
 	
+	// 또다시 abstarct 로 선언해주면 하위 클래스에게 그 구현을 넘기는 것임.
 	public abstract  String toString();
-	
 	
 }
